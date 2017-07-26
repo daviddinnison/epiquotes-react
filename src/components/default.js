@@ -1,9 +1,11 @@
 import React from 'react';
 import RequestQuotes from './requestQuotes.js'
 
-export default function Default(props) {
-    return( 
-     <main className= "default">
+export default function Default(props) {	
+	return( 
+		console.log('YOU ARE IN DEFAULT'), 
+		console.log(props.quotes),
+		 <main className= "default">
 			  <button className="add-quotes">Add my quote now!</button>
 			  <form action="/#" id="find-by-source">
 				  <fieldset>
@@ -17,8 +19,7 @@ export default function Default(props) {
 					  </select>
 					<button type="button" className="find-tags-search"> search </button>
 					<hr/>
-					<button onClick={e => props.banana(e)} 
-    className="find-quotes">give me quotes!</button>
+					<button onClick={e=>{console.log(props.quotes)}}className="find-quotes">give me quotes!</button>
 				</fieldset>
 			  </form>
       </main>
