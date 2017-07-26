@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Header from './components/header';
+import UserPost from './components/userPost';
+import AllQuotes from './components/allQuotes';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Welcome to EpiQuotes</h2>
-        </div>
-        <p className="App-box">
-          This is the box.
-        </p>
-      </div>
+    <div className="container">
+        <Header/>
+        <UserPost/>
+        <AllQuotes/>
+    </div>
     );
   }
 }
