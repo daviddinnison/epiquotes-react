@@ -8,22 +8,34 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      input: ''
+      quotes: false
     }
   }
-  revealQuotes(input) {
+  revealQuotes(quotes) {
+    console.log('executing reveal quotes');
     this.setState({
-      input
-    })
+      quotes
+    });
   }
 
   render() {
-     console.log(this.props.quotes);
+     console.log(this.props.quotes + 'props quotes');
+    //  console.log(this.state.quotes + 'state quotes');
     return (
     <div className="container">
         <Header/>
         <UserPost/>
-        <Default />
+        <Default banana={this.revealQuotes}/>
+        <div>{this.state.quotes && this.props.quotes.forEach(function(item)      
+          {return (
+            <section class = "quote">
+      <p>{item.quote}</p>
+      <p>{item.source}</p>
+      <p class= "quote-tag-style">{item.tag}</p>
+	    </section>)
+          })
+
+        }</div>
     </div>
     )
   }
