@@ -1,8 +1,9 @@
 import React from 'react';
+import ShowQuotes from './showQuotes.js'
 
-export default function AllQuotes() {
+export default function Default() {
     return( 
-     <main className= "all-quotes">
+     <main className= "default">
 			  <button className="add-quotes">Add my quote now!</button>
 			  <form action="/#" id="find-by-source">
 				  <fieldset>
@@ -16,7 +17,7 @@ export default function AllQuotes() {
 					  </select>
 					<button type="button" className="find-tags-search"> search </button>
 					<hr/>
-					<button className="find-quotes">give me quotes!</button>
+					<ShowQuotes />
 				</fieldset>
 			  </form>
       </main>

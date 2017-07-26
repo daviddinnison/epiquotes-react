@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './components/header';
 import UserPost from './components/userPost';
-import AllQuotes from './components/allQuotes';
+import Default from './components/default.js';
 import './App.css';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
     <div className="container">
         <Header/>
         <UserPost/>
-        <AllQuotes/>
+        <Default />
     </div>
     );
   }
