@@ -1,5 +1,5 @@
 import React from 'react';
-import ShowQuotes from './showQuotes.js'
+import RequestQuotes from './requestQuotes.js'
 
 export default function Default() {
     return( 
@@ -17,7 +17,7 @@ export default function Default() {
 					  </select>
 					<button type="button" className="find-tags-search"> search </button>
 					<hr/>
-					<ShowQuotes />
+					<RequestQuotes />
 				</fieldset>
 			  </form>
       </main>
